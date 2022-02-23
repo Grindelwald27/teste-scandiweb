@@ -1,0 +1,42 @@
+body{
+	font-family: "Outfit", sans-serif;
+	text-align: center;
+}
+
+header {
+	border-bottom: 1px solid black;
+}
+
+ul li {
+	margin-right: 5px;
+}
+
+section {
+	height: 90%;
+	margin: 20px 0px;
+}
+
+.itens {
+	padding: 10px;
+}
+
+section div.col-2 {
+	margin: 0px auto;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+section div.col-2 div.item {
+	text-align: center;
+}
+
+footer {
+	margin-top: 20px;
+	padding-top: 20px;
+	text-align: center;
+	border-top: 1px solid black;
+}
+
+form div.form-inline {
+	margin-bottom: 10px;
+}
