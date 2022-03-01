@@ -25,12 +25,16 @@ section {
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 
+span{
+	font-size: 0.9em;
+}
+
 section div.col-2 {
-	margin: 5px 20px;
+	margin: 5px 40px;
 	border: 1px solid black;
 	padding: 5px;
 }
