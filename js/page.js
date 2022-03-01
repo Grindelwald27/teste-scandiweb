@@ -74,7 +74,7 @@ function seletor(){
 
 		inputElement.setAttribute('placeholder', 'Size (MB) ');
 
-		inputElement.setAttribute('id', 'dvd');
+		inputElement.setAttribute('id', 'size');
 
 		divElement.appendChild(inputElement);
 
@@ -95,7 +95,7 @@ function seletor(){
 		divElement.appendChild(principal);
 
 		//mexendo no label--------------------------------------------------
-		let textElement = document.createTextNode('Weigth (KG) :')
+		let textElement = document.createTextNode('Weight (KG) :')
 
 		labelElement.appendChild(textElement);
 
@@ -108,9 +108,9 @@ function seletor(){
 
 		inputElement.setAttribute('class', 'form-control ml-5 col-3');
 
-		inputElement.setAttribute('placeholder', 'weigth (kg)');
+		inputElement.setAttribute('placeholder', 'weight (kg)');
 
-		inputElement.setAttribute('id', 'weigth');
+		inputElement.setAttribute('id', 'weight');
 
 		divElement.appendChild(inputElement);
 
