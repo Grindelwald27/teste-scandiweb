@@ -1,6 +1,11 @@
+body, html {
+	overflow: hidden;
+}
+
 body{
 	font-family: "Outfit", sans-serif;
 	text-align: center;
+
 }
 
 header {
@@ -18,10 +23,14 @@ section {
 
 .itens {
 	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
 section div.col-2 {
-	margin: 0px auto;
+	margin: 5px 20px;
 	border: 1px solid black;
 	padding: 5px;
 }

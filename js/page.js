@@ -12,7 +12,35 @@ let principal = document.createElement('div');
 
 principal.setAttribute('id', 'medida');
 
-principal.setAttribute('class', 'form-group');
+let span = document.createElement('span');
+
+
+// criando caixas forniture
+
+// caixa 1
+let caixa1 = document.createElement('div');
+
+let labelElement1 = document.createElement('label');
+
+labelElement1.setAttribute('class', 'col-4');
+
+// caixa 2
+let caixa2 = document.createElement('div');
+
+let labelElement2 = document.createElement('label');
+
+labelElement2.setAttribute('class', 'col-4');
+
+let inputElement2 = document.createElement('input');
+
+// caixa 3
+let caixa3 = document.createElement('div');
+
+let labelElement3 = document.createElement('label');
+
+labelElement3.setAttribute('class', 'col-4');
+
+let inputElement3 = document.createElement('input');
 
 // adicionando principal na divElement------------------------------------
 divElement.appendChild(principal);
@@ -23,7 +51,9 @@ function seletor(){
 
 	let valor = select.options[select.selectedIndex].value;
 
-	labelElement.innerHTML = '';
+	rezetarLabel();
+
+	principal.innerHTML = null;
 	// Size---------------------------------------------------------------
 	if (valor === 'Size'){
 
@@ -34,11 +64,13 @@ function seletor(){
 
 		labelElement.appendChild(textElement);
 
+		labelElement.setAttribute('class', 'col-3');
+
 		divElement.appendChild(labelElement);
 
 		inputElement.setAttribute('type', 'number');
 
-		inputElement.setAttribute('class', 'form-control ml-5');
+		inputElement.setAttribute('class', 'form-control ml-5 col-3');
 
 		inputElement.setAttribute('placeholder', 'Size (MB) ');
 
@@ -46,8 +78,18 @@ function seletor(){
 
 		divElement.appendChild(inputElement);
 
+		let txSpan = document.createTextNode('Please provide size in MB format');
+
+		span.appendChild(txSpan);
+
+		span.setAttribute('style', 'font-weight: bold;');
+
+		span.setAttribute('class', 'col-7');
+
+		divElement.appendChild(span);
+
 	}else if(valor === 'Book'){
-		removerInput();
+		removerPrin();
 
 		// adiciona principal na div pai-----------------------------------
 		divElement.appendChild(principal);
@@ -57,39 +99,49 @@ function seletor(){
 
 		labelElement.appendChild(textElement);
 
+		labelElement.setAttribute('class', 'col-3');
+
 		divElement.appendChild(labelElement);
 
 		// mexendo no input ------------------------------------------
 		inputElement.setAttribute('type', 'number');
 
-		inputElement.setAttribute('class', 'form-control ml-5');
+		inputElement.setAttribute('class', 'form-control ml-5 col-3');
 
 		inputElement.setAttribute('placeholder', 'weigth (kg)');
 
 		inputElement.setAttribute('id', 'weigth');
 
 		divElement.appendChild(inputElement);
+
+		let txSpan = document.createTextNode('Please provide weight in KG format');
+
+		span.appendChild(txSpan);
+
+		span.setAttribute('style', 'font-weight: bold;');
+
+		span.setAttribute('class', 'col-7');
+
+		divElement.appendChild(span);
 		
 	}else if(valor === 'Furniture'){
-		removerInput();
+		removerPrin();
 
 		// adiciona principal na div pai
 		divElement.appendChild(principal);
 
 		// caixa 1 ---------------------------------------------------
-		let texto1 = document.createTextNode('Height (CM)');
+		let texto1 = document.createTextNode('Height (CM) :');
 
-		let caixa1 = document.createElement('div');
+		caixa1.setAttribute('class', 'caixa1 form-inline col-12');
 
-		caixa1.setAttribute('class', 'caixa1 form-inline');
+		labelElement1.appendChild(texto1);
 
-		labelElement.appendChild(texto1);
-
-		caixa1.appendChild(labelElement);
+		caixa1.appendChild(labelElement1);
 
 		inputElement.setAttribute('type', 'number');
 
-		inputElement.setAttribute('class', 'form-control ml-5');
+		inputElement.setAttribute('class', 'form-control ml-5 col-4');
 
 		inputElement.setAttribute('placeholder', 'height (cm)');
 
@@ -99,73 +151,85 @@ function seletor(){
 
 		principal.appendChild(caixa1);
 
-		divElement.appendChild(principal);
-
 		// caixa 2 --------------------------------------------------------
-		let texto2 = document.createTextNode('Width (CM)');
+		let texto2 = document.createTextNode('Width (CM) :');
 
-		let caixa2 = document.createElement('div');
+		caixa2.setAttribute('class', 'caixa2 form-inline col-12');
 
-		caixa2.setAttribute('class', 'caixa2 form-inline');
+		labelElement2.appendChild(texto2);
 
-		labelElement.appendChild(texto2);
+		caixa2.appendChild(labelElement2);
 
-		caixa2.appendChild(labelElement);
+		inputElement2.setAttribute('type', 'number');
 
-		inputElement.setAttribute('type', 'number');
+		inputElement2.setAttribute('class', 'form-control ml-5 col-4');
 
-		inputElement.setAttribute('class', 'form-control ml-5');
+		inputElement2.setAttribute('placeholder', 'width (cm)');
 
-		inputElement.setAttribute('placeholder', 'width (cm)');
+		inputElement2.setAttribute('id', 'width');
 
-		inputElement.setAttribute('id', 'width');
-
-		caixa2.appendChild(inputElement);
+		caixa2.appendChild(inputElement2);
 
 		principal.appendChild(caixa2);
 
-		divElement.appendChild(principal);
-
 		// caixa 3 ------------------------------------------------------
-		let texto3 = document.createTextNode('Length (CM)');
+		let texto3 = document.createTextNode('Length (CM) :');
 
-		let caixa3 = document.createElement('div');
+		caixa3.setAttribute('class', 'caixa3 form-inline col-12');
 
-		caixa3.setAttribute('class', 'caixa3 form-inline');
+		labelElement3.appendChild(texto3);
 
-		labelElement.appendChild(texto3);
+		caixa3.appendChild(labelElement3);
 
-		caixa3.appendChild(labelElement);
+		inputElement3.setAttribute('type', 'number');
 
-		inputElement.setAttribute('type', 'number');
+		inputElement3.setAttribute('class', 'form-control ml-5 col-4');
 
-		inputElement.setAttribute('class', 'form-control ml-5');
+		inputElement3.setAttribute('placeholder', 'length (cm)');
 
-		inputElement.setAttribute('placeholder', 'length (cm)');
+		inputElement3.setAttribute('id', 'length');
 
-		inputElement.setAttribute('id', 'length');
-
-		caixa3.appendChild(inputElement);
+		caixa3.appendChild(inputElement3);
 
 		principal.appendChild(caixa3);
 
-		divElement.appendChild(principal);
+		// span
+		let txSpan = document.createTextNode('Please provide dimensions in HxWxL format');
+
+		span.appendChild(txSpan);
+
+		span.setAttribute('style', 'font-weight: bold;');
+
+		span.setAttribute('class', 'col-9');
+
+		divElement.appendChild(span);
 
 	}else if (valor === 'Type Switcher'){
-		removerInput();
+		removerPrin();
 
 		// adiciona principal na div pai
 		divElement.appendChild(principal);
-
-		divElement.removeChild(labelElement);
 
 		divElement.removeChild(inputElement);
 	}
 
 }
 
-function removerInput(){
+function removerPrin(){
 	let divElement = document.getElementById('print');
 
 	divElement.removeChild(principal);
+
+}
+
+function rezetarLabel(){
+	labelElement.innerHTML = null;
+
+	labelElement1.innerHTML = null;
+
+	labelElement2.innerHTML = null;
+
+	labelElement3.innerHTML = null;
+
+	span.innerHTML = null;
 }
