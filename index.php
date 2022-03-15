@@ -29,7 +29,7 @@
 
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item">
-								<a href="add-page.html"><button class="nav-link btn btn-primary">ADD</button></a>
+								<a href="add-page.php"><button class="nav-link btn btn-primary">ADD</button></a>
 							</li>
 							<li class="nav-item">
 								<button class="btn btn-primary" id="delete-product-btn">MASS DELETE</button>
