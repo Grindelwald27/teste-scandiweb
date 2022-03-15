@@ -37,7 +37,7 @@
 							<a href="add-page.php"><button class="btn btn-primary">Save</button></a>
 						</li>
 						<li>
-							<a href="index.php"><button class="btn btn-primary">Cancel</button></a>
+							<a href="index.html"><button class="btn btn-primary">Cancel</button></a>
 						</li>
 					</ul>
 
